@@ -1,15 +1,15 @@
 console.log('Задача 1. Пакування товарів');
 
 function isEnoughCapacity(products, containerSize) {
-  let quantityArr = Object.values(products); //[2, 3, 1]
+  const quantityArr = Object.values(products); //[2, 3, 1]
   let quantity = 0;
-  for (i = 0; i < quantityArr.length; i++) {
+  for (let i = 0; i < quantityArr.length; i++) {
     /*  console.log(
       `${quantity} + ${quantityArr[i]} = ${quantity + quantityArr[i]}`
     ); */
     quantity += quantityArr[i];
   }
-  let result = quantity <= containerSize ? true : false;
+  const result = quantity <= containerSize ? true : false;
   //   console.log(`Result : ${quantity} <= ${containerSize} => ${result}`);
 
   return result;
